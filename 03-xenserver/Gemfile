@@ -1,0 +1,16 @@
+source ENV['GEM_SOURCE'] || "https://rubygems.org"
+
+# https_proxy=http://10.18.0.254:3128 bundle install -V
+
+gem 'dotenv'
+gem 'uuidtools'
+gem 'activesupport'
+gem 'formatador'
+
+# gem 'fog'#, :git => 'https://github.com/fog/fog'
+# gem 'fog', :git => 'git://github.com/mingjin/fog.git', :branch => 'vsphere'
+gem 'fog', :git => 'https://github.com/mingjin/fog.git', :branch => 'vsphere'
+
+
+
+
