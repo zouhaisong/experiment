@@ -60,9 +60,6 @@ def convert_snapshot_to_template(snapshot,template_name)
   # snapshot.is_a_snapshot = false
   # snapshot.save
 
-  snapshot.is_a_snapshot = false
-
-
   # # Fail 2 VM.create_template
   # compute.instance_eval{
   #   @connection.request({
@@ -72,6 +69,7 @@ def convert_snapshot_to_template(snapshot,template_name)
   #     snapshot.reference
   #   )
   # }
+
   # # Fail 3 VM.make_into_template
   # compute.instance_eval{
   #   @connection.request({
