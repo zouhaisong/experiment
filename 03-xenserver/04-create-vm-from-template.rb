@@ -38,16 +38,22 @@ attributes = %w[name is_a_template is_a_snapshot is_control_domain uuid]
 
 Formatador.display_table list_images.map{|i| Hash[attributes.map{|a| [a,i.send(a)] }] }
 
-vm = compute.servers.new :name => vm_name, :template_name => "e9016941-1db5-f931-4760-625d011db6c4"
-vm.save
+# vm = compute.servers.new :name => vm_name, :template_name => "e9016941-1db5-f931-4760-625d011db6c4"
+# vm.save
 
 def list_snapshots
   compute.servers.custom_templates.find_all{|t| t.is_a_snapshot }
 end
+Formatador.display_line "list_snapshots:"
+Formatador.display_table list_snapshots.map{|i| Hash[attributes.map{|a| [a,i.send(a)] }] }
 
 def list_templates
   compute.servers.custom_templates.find_all{|t| t.is_a_template && !t.is_a_snapshot }
 end
+Formatador.display_line "list_templates:"
+Formatador.display_table list_templates.map{|i| Hash[attributes.map{|a| [a,i.send(a)] }] }
+
+
 snapshot = "temp-snapshot"
 template_name = "template-#{snapshot}"
 def convert_snapshot_to_template(snapshot,template_name)
