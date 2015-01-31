@@ -23,5 +23,21 @@ compute = Fog::Compute.new({
 puts "Connected to #{xs_host}."
 
 
-################################################################################
-
+vm = compute.servers.find{|vm| vm.name=='tli-delete-1005'}
+vdi = vm.vbds.map(&:vdi).find{|vdi| vdi.name=='tli-delete-1005.5' }
+compute.instance_eval{
+  @connection.request({
+    :parser => Fog::Parsers::XenServer::Base.new,
+    :method => 'VBD.plug'
+  },
+  vdi.vbds.first.reference
+  )
+}
+compute.instance_eval{
+  @connection.request({
+    :parser => Fog::Parsers::XenServer::Base.new,
+    :method => 'VBD.unplug'
+  },
+  vdi.vbds.first.reference
+  )
+}
