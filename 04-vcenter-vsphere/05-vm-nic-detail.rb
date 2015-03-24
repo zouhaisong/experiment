@@ -32,7 +32,7 @@ logger.info("Connect to #{vcenter_host} success.")
 dc = vim.serviceInstance.find_datacenter(datacenter_name) or fail "datacenter not found"
 
 vm = dc.find_vm("tli-packer")
-nics = vm_mob_ref.config.hardware.device.grep(RbVmomi::VIM::VirtualVmxnet3) + vm_mob_ref.config.hardware.device.grep(RbVmomi::VIM::VirtualE1000)
+nics = vm.config.hardware.device.find_all{|d| d.is_a?(RbVmomi::VIM::VirtualEthernetCard)}
 
 # vim.searchIndex.FindByUuid :uuid=>vm.config.instanceUuid, :vmSearch => true, :instanceUuid => true
 # dc.find_vm vm.name
