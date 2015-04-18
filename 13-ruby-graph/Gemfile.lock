@@ -1,0 +1,44 @@
+GIT
+  remote: https://github.com/zouhaisong/gratr.git
+  revision: d96d658abd2466d7542b6aeb54f8c17250a4bbc2
+  specs:
+    gratr (0.5.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (4.2.1)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    axlsx (2.0.1)
+      htmlentities (~> 4.3.1)
+      nokogiri (>= 1.4.1)
+      rubyzip (~> 1.0.0)
+    formatador (0.2.5)
+    htmlentities (4.3.3)
+    i18n (0.7.0)
+    json (1.8.2)
+    mini_portile (0.6.2)
+    minitest (5.5.1)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+    ruby-graphviz (1.2.1)
+    rubyzip (1.0.0)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uuidtools (2.1.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  axlsx
+  formatador
+  gratr!
+  ruby-graphviz
+  uuidtools
