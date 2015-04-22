@@ -1,0 +1,13 @@
+source ENV['GEM_SOURCE'] || "https://rubygems.org"
+
+
+#gem 'dotenv'
+gem 'uuidtools'
+gem 'axlsx'
+gem 'formatador'
+gem 'activesupport'
+
+gem 'ruby-graphviz'
+
+
+
