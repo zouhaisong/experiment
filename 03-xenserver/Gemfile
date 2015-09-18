@@ -9,7 +9,7 @@ gem 'formatador'
 
 # gem 'fog'#, :git => 'https://github.com/fog/fog'
 # gem 'fog', :git => 'git://github.com/mingjin/fog.git', :branch => 'vsphere'
-gem 'fog', :git => 'https://github.com/mingjin/fog.git', :branch => 'vsphere'
+gem 'fog-xenserver'
 
 
 
