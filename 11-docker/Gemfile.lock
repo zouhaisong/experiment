@@ -1,14 +1,45 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (4.2.4)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
+    axlsx (2.0.1)
+      htmlentities (~> 4.3.1)
+      nokogiri (>= 1.4.1)
+      rubyzip (~> 1.0.0)
     docker-api (1.20.0)
       excon (>= 0.38.0)
       json
+    dotenv (2.0.2)
     excon (0.45.1)
+    formatador (0.2.5)
+    htmlentities (4.3.4)
+    i18n (0.7.0)
     json (1.8.2)
+    mini_portile (0.6.2)
+    minitest (5.8.0)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
+    rubyzip (1.0.0)
+    thread_safe (0.3.5)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+    uuidtools (2.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
+  axlsx
   docker-api
+  dotenv
+  formatador
+  uuidtools
+
+BUNDLED WITH
+   1.10.6

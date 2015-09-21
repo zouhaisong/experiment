@@ -2,10 +2,10 @@ source ENV['GEM_SOURCE'] || "https://rubygems.org"
 
 # https_proxy=http://10.18.0.254:3128 bundle install -V
 
-#gem 'dotenv'
-#gem 'uuidtools'
-#gem 'axlsx'
-#gem 'formatador'
-#gem 'activesupport'
+gem 'dotenv'
+gem 'uuidtools'
+gem 'axlsx'
+gem 'formatador'
+gem 'activesupport'
 
 gem 'docker-api', :require => 'docker'
